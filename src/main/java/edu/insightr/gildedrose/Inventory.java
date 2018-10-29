@@ -102,5 +102,5 @@ public class Inventory {
 
 // POUR LA SÉANCE PROCHAINE
 // Ajouter au git (ajouter tag)
-// Créer une branche "Visteur"
+// Créer une branche "Visiteur"
 // Utiliser le design pattern Visitor
