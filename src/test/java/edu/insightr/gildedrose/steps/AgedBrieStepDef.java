@@ -14,7 +14,7 @@ public class AgedBrieStepDef {
     private Item[] items;
     private Item brie;
 
-    @Given("^I have a new inventory$")
+    @Given("^I have a new inventory with an aged brie$")
     public void iHaveANewInventory() throws Throwable{
         inventory = new Inventory();
         items = inventory.getItems();
@@ -26,7 +26,7 @@ public class AgedBrieStepDef {
         assertThat(brie.getQuality(), is(brieQuality));
     }
 
-    @When("^I update the inventory$")
+    @When("^I update the brie inventory$")
     public void iUpdateTheInventory() throws Throwable {
         inventory.updateQuality();
     }

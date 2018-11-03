@@ -14,19 +14,19 @@ public class VestStepDef {
     private Item[] items;
     private Item vest;
 
-    @Given("^I have a new inventory$")
+    @Given("^I have a new inventory with a vest$")
     public void iHaveANewInventory() throws Throwable{
         inventory = new Inventory();
         items = inventory.getItems();
         vest = items[0];
     }
 
-    @Then("^the quality of the vest item is (\\d+)$")
+    @Then("^the quality of the Vest item is (\\d+)$")
     public void theQualityOfTheConjuredIs(int vestQuality) throws Throwable {
         assertThat(vest.getQuality(), is(vestQuality));
     }
 
-    @When("^I update the inventory$")
+    @When("^I update the vest inventory$")
     public void iUpdateTheInventory() throws Throwable {
         inventory.updateQuality();
     }
