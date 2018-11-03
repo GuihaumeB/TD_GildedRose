@@ -1,7 +1,8 @@
-Feature : Aged Brie
-  This item's quality should increase over time
+Feature: AgedBrie Item
+  #An aged bries' quality increases with time
 
-Scenario :
-  Given I have 1 Aged Brie
-  When sellIn decreases by 1
-  Then quality increases by 1
+  Scenario: Conjured item update
+    Given I have a new inventory
+    Then the quality of the AgedBrie item is 6
+    When I update the inventory
+    Then the quality of the AgedBrie item is 7

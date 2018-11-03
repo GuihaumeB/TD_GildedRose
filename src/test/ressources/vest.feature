@@ -1,6 +1,8 @@
-Feature: Vest
+Feature: Vest Item
+  #A vest item's quality decreases normally
 
-Scenario:
-  Given a vest item
-  When sellIn decreases by 1
-  Then quality decreases by 1
+  Scenario: Conjured item update
+    Given I have a new inventory
+    Then the quality of the Vest item is 6
+    When I update the inventory
+    Then the quality of the Vest item is 5
