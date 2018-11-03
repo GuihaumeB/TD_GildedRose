@@ -90,6 +90,20 @@ public class Inventory {
         }
     }
 
+    /*public void superUpdate() {
+        Visitor myVisitor = new Visitor();
+        for (Item item : items){
+            item.accept(myVisitor);
+        }
+    }*/
+    /*
+    public megaUpdate(){
+        for (Item item : items){
+            item.compute();
+        }
+    }
+     */
+
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         for (int i = 0; i < 10; i++) {
@@ -98,28 +112,3 @@ public class Inventory {
         }
     }
 }
-
-
-// POUR LA SÉANCE PROCHAINE
-// Ajouter au git (ajouter tag)
-// Créer une branche "Visiteur"
-// Utiliser le design pattern Visitor
-//      Le visitor a tous les cas pour tous les items
-/*
-public void superUpdate() {
-    Visitor myVisitor = new Visitor();
-    for (Item item : items){
-        item.accept(myVisitor);
-    }
-}
- */
-
-//Design pattern Strategy
-//      Chaque stratégie a son cas
-/*
-public megaUpdate(){
-    for (Item item : items){
-        item.compute();
-    }
-}
- */
