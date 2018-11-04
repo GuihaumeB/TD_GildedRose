@@ -90,24 +90,17 @@ public class Inventory {
         }
     }
 
-    /*public void superUpdate() {
-        Visitor myVisitor = new Visitor();
-        for (Item item : items){
-            item.accept(myVisitor);
-        }
-    }*/
-    /*
-    public megaUpdate(){
+    public void megaUpdate(){
         for (Item item : items){
             item.compute();
         }
     }
-     */
 
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         for (int i = 0; i < 10; i++) {
             inventory.updateQuality();
+            inventory.megaUpdate();
             inventory.printInventory();
         }
     }
