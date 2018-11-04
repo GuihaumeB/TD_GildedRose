@@ -1,6 +1,6 @@
 package edu.insightr.gildedrose;
 
-public class Item {
+public class Item implements Visitable{
 
     private String name;
     private int sellIn;
@@ -45,5 +45,10 @@ public class Item {
                 ", sellIn=" + sellIn +
                 ", quality=" + quality +
                 '}';
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }
